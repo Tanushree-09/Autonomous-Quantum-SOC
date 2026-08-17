@@ -39,6 +39,23 @@ const Dashboard = () => {
 
   const threat = data?.threat_analysis;
   const quantum = data?.quantum_analysis;
+  const attackTypes = [
+  "BENIGN",
+  "PortScan",
+  "DoS Hulk",
+  "DDoS",
+  "DoS GoldenEye",
+  "FTP-Patator",
+  "SSH-Patator",
+  "DoS slowloris",
+  "DoS Slowhttptest",
+  "Bot",
+  "Web Attack ï¿½ Brute Force",
+  "Web Attack ï¿½ XSS",
+  "Infiltration",
+  "Web Attack ï¿½ Sql Injection",
+  "Heartbleed",
+    ];  
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -54,14 +71,17 @@ const Dashboard = () => {
                 Attack Type
               </label>
 
-              <input
+              <select
                 value={attack}
-                onChange={(e) =>
-                  setAttack(e.target.value)
-                }
+                onChange={(e) => setAttack(e.target.value)}
                 className="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none focus:border-slate-500"
-                placeholder="e.g. PortScan"
-              />
+              >
+                {attackTypes.map((type) => (
+                  <option key={type} value={type}>
+                    {type}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div className="flex items-end">
