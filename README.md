@@ -11,7 +11,7 @@ An autonomous cybersecurity operations platform that combines AI-driven threat d
 - Python
 - FastAPI
 - LangGraph
-- Pydantic
+- TypedDict
 - Elasticsearch
 - Neo4j
 - Scikit-learn
