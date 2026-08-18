@@ -21,7 +21,7 @@ An autonomous cybersecurity operations platform that combines AI-driven threat d
 - Docker & Uvicorn
 
 Frontend
-- React & Lucid React
+- React & Lucide React
 - Vite
 - Tailwind CSS
 - Recharts
